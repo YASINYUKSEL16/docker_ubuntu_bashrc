@@ -14,9 +14,12 @@ alias l='ls $LS_OPTIONS -lA'
 # alias rm='rm -i'
 # alias cp='cp -i'
 # alias mv='mv -i'
+
 ####################### YYXL’s personal aliases ###########################
+
 # sudo apt-get install tree
 alias t='tree'
+
 # WINDOWS SYSTEM BASHRC PATH WILL BE SET LATER
 system=$(uname -s)
 if [ "$system" == "Darwin" ]; then
@@ -44,17 +47,23 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
    alias cb='code ~/.bashrc'
    alias sb='source ~/.bashrc'
 fi
+
 ### check is there any symlink
 # https://askubuntu.com/questions/522051/how-to-list-all-symbolic-links-in-a-directory
 alias check-symlink='find . -type l -ls'
+
 ### find how many directory in the current directory
 alias cdq='find . -mindepth 1 -maxdepth 1 -type d | wc -l'
-cd data-generator/ && source datagen_venv/bin/activate && cd ..
+
+source datagen_venv/bin/activate
+
 # venv commands
 alias d='deactivate'
 alias a='source datagen_venv/bin/activate'
 
+##### SOME KAFKA ALIASES ######
 # https://gist.github.com/PardhuMadipalli/65c888243a192421f5a47e9c8ab14a38
+
 export KAFKA_HOME=/kafka
 # Start Kafka server
 alias startKafka='$KAFKA_HOME/bin/kafka-server-start.sh -daemon $KAFKA_HOME/config/server.properties'

@@ -52,7 +52,7 @@ alias cdq='find . -mindepth 1 -maxdepth 1 -type d | wc -l'
 cd data-generator/ && source datagen_venv/bin/activate && cd ..
 # venv commands
 alias d='deactivate'
-alias a='source data-generator/datagen_venv/bin/activate'
+alias a='source datagen_venv/bin/activate'
 
 # https://gist.github.com/PardhuMadipalli/65c888243a192421f5a47e9c8ab14a38
 export KAFKA_HOME=/kafka
